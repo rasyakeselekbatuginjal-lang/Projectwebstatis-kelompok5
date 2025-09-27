@@ -1,0 +1,54 @@
+:root {
+    --primary: #3B82F6;
+    --bg: #010101;
+}
+
+
+/* ini (*) buat milih semua */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none; 
+    list-style: none;
+}
+
+body {
+    font-family: 'roboto';
+    background-color: var(--bg);
+    color: #fff;        
+    display: flex;
+}
+
+.tombol {
+   display: flex;
+   justify-content: right;
+   margin-left: 1000px;
+   gap: 20px;
+   align-items: center;
+   color: #fff;
+}
+
+
+
+/* start desain title */
+.title {
+    display: flex;
+    gap: 2px;
+    margin-left: 10px;
+    align-items: center;
+}
+
+.firstname {
+    font-size: 20px;
+    font-weight: bold;
+    color: orange;
+}
+
+.lastname {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+ 
