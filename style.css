@@ -3,6 +3,14 @@
     --bg: #010101;
 }
 
+nav {
+    height: 40px;
+    width: 100%;
+    background-color: #3B82F6;
+    display: flex;
+    align-items: center;
+}
+
 
 /* ini (*) buat milih semua */
 
@@ -22,13 +30,24 @@ body {
 
 .tombol {
    display: flex;
-   justify-content: right;
-   margin-left: 1000px;
-   gap: 20px;
-   align-items: center;
-   color: #fff;
+   justify-content: flex-end;
+   width: 100%;
+   gap: 10px;
+   margin-right: 10px;
 }
 
+li a {
+    color: #fff;
+}
+
+.tombol li a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.tombol li a:hover {
+  transform: scale(1.2);
+}
 
 
 /* start desain title */
