@@ -1,0 +1,74 @@
+:root {
+    --primary: #3B82F6;
+    --bg: #fff;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: black;
+}
+
+
+nav {
+    height: 40px;
+    width: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+
+.title {
+    display: flex;
+    gap: 2px;
+    margin-left: 10px;
+    align-items: center;
+}
+
+.firstname {
+    font-size: 20px;
+    font-weight: bold;
+    color: orange;
+}
+
+.lastname {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.tombol {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 30px;
+    margin-right: 50px;
+}
+
+li a {
+    color: black;
+}
+
+.tombol li a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.tombol li a:hover {
+    transform: scale(1.1);
+}
