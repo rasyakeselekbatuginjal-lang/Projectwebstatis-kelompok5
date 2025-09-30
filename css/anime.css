@@ -3,27 +3,11 @@
     --bg: #fff;
 }
 
-
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    scroll-behavior: smooth;
-}
-
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    color: black;
-}
-
-
 nav {
     height: 40px;
     width: 100%;
-    background-color: #f4f4f4;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0 30px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid black;
@@ -33,13 +17,45 @@ nav {
 }
 
 
+/* ini (*) buat milih semua */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none; 
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+.tombol {
+   display: flex;
+   justify-content: flex-end;
+   width: 100%;
+   gap: 30px;
+   margin-right: 50px;
+   
+}
+
+
+.tombol li a {
+    color: var(--bg);
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.tombol li a:hover {
+    color: #ffd700;
+  transform: scale(1.1);
+}
+
+
+/* start desain title */
 .title {
     display: flex;
-    gap: 2px;
     margin-left: 10px;
     align-items: center;
 }
-
+/* khusus nama */
 .firstname {
     font-size: 20px;
     font-weight: bold;
@@ -49,26 +65,69 @@ nav {
 .lastname {
     font-size: 20px;
     font-weight: 500;
+    color: rgb(177, 167, 167);
 }
 
+.firstname1 { 
+    font-size: 12px;
+    font-weight: 600;
+}
 
-.tombol {
-    display: flex;
-    justify-content: flex-end;
+.lastname1 {
+    font-size: 12px;
+    color: var(--primary);
+}
+
+body {
+  background: url("../gambar/wp6554446.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+.kotak {
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparan supaya teks lebih terbaca */
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  margin: 50px;
+  padding: 25px;
+}
+
+.kotak a {
+    color: #b390e8;
+}
+
+.kotak1 {
+    background-color: rgba(0, 0, 0, 0.6); ;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 10px;
+    text-align: center;
+    font-family: 'roboto';
+    font-style: oblique;
+}
+
+img {
     width: 100%;
-    gap: 30px;
-    margin-right: 50px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: 1.2s ease;
 }
 
-li a {
-    color: black;
+img:hover {
+    transform: scale(0.99);
 }
 
-.tombol li a {
-    display: inline-block;
-    transition: transform 0.3s ease;
+h2 {
+    font-size: 20px;
 }
 
-.tombol li a:hover {
-    transform: scale(1.1);
+.rating {
+    color: #ffd700;
+    font-size: 16px;
+}
+
+.sinopsis {
+    font-style: italic;
+    color: #ddd;
+    text-align: justify;
 }
