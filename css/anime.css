@@ -104,6 +104,11 @@ body {
     font-family: 'roboto';
 }
 
+.tonton a {
+    font-weight: 900; 
+    font-size: large;
+}
+
 img {
     width: 100%;
     height: auto;
@@ -134,4 +139,24 @@ h2 {
 
 .penjelasan {
     color: #ddd;
+}
+
+.animescroll {
+    display: flex;
+}
+
+.animeimg {
+    height: auto;
+    border-radius: 20px;
+    margin: 9px;
+}
+
+.animeimg img {
+    height: 180px;
+    width: 115px;
+}
+
+.animeimg p {
+   text-align: center;
+   color: #ddd;
 }
