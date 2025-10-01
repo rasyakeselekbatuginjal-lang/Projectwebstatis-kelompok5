@@ -86,8 +86,8 @@ body {
 }
 
 .kotak {
-  background-color: rgba(0, 0, 0, 0.6); /* semi-transparan supaya teks lebih terbaca */
-  border: 1px solid rgba(255,255,255,0.3);
+  background-color: rgba(0, 0, 0, 0.8); /* semi-transparan supaya teks lebih terbaca */
+  border: 1px solid rgba(255,255,255,0.3); 
   border-radius: 10px;
   margin: 50px;
   padding: 20px;
@@ -107,3 +107,4 @@ img {
 img:hover {
     transform: scale(0.99);
 }
+
