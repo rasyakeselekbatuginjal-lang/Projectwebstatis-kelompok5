@@ -55,6 +55,42 @@ nav {
     margin-left: 10px;
     align-items: center;
 }
+
+.welcome-first {
+  font-size: 33px;
+  font-weight: bold;
+  color: orange;
+}
+
+.welcome-last {
+  font-size: 33px;
+  font-weight: bold;
+  color: rgb(177, 167, 167);
+}
+
+.mono {
+    border-radius: 20px;
+    height: 180px;
+    width: 120px;
+    margin: 2px 6px;
+}
+
+#home p {
+    text-align: center;
+    font-family: "roboto", sans-serif;
+    font-size: 16px;
+    margin: 20px auto;
+}
+
+
+/* Supaya judulnya di tengah dan rapi */
+#home h1 {
+  text-align: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+
 /* khusus nama */
 .firstname {
     font-size: 20px;
