@@ -164,3 +164,22 @@ h2 {
 .amimescroll {
     overflow-x: auto;
 }
+
+.tonton button {
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: rgba(21, 10, 10, 0.6);
+    text-decoration: none;
+    padding: 5px;
+    transition: 1.2s ease;
+}
+
+.tonton button:hover {
+    transform: scale(1.05);
+}
+
+.tonton a{
+    font-family: "roboto";
+    color: #ddd;
+}
+
