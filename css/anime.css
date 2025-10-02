@@ -160,3 +160,7 @@ h2 {
    text-align: center;
    color: #ddd;
 }
+
+.amimescroll {
+    overflow-x: auto;
+}
