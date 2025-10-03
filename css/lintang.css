@@ -1,0 +1,184 @@
+:root {
+    --primary: #3B82F6;
+    --bg: #fff;
+}
+
+nav {
+    height: 40px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+
+/* ini (*) buat milih semua */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none; 
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+.tombol {
+   display: flex;
+   justify-content: flex-end;
+   width: 100%;
+   gap: 30px;
+   margin-right: 50px;
+   
+}
+
+
+.tombol li a {
+    color: var(--bg);
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.tombol li a:hover {
+    color: #ffd700;
+  transform: scale(1.1);
+}
+
+
+/* start desain title */
+.title {
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+}
+/* khusus nama */
+.firstname {
+    font-size: 20px;
+    font-weight: bold;
+    color: orange;
+}
+
+.lastname {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(177, 167, 167);
+}
+
+.firstname1 { 
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.lastname1 {
+    font-size: 12px;
+    color: var(--primary);
+}
+
+body {
+  background: url("../gambar/wp6554446.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+.kotak {
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparan supaya teks lebih terbaca */
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  margin: 50px;
+  padding: 25px;
+}
+
+.kotak a {
+    color: #b390e8;
+}
+
+.kotak1 {
+    background-color: rgba(0, 0, 0, 0.6); ;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 10px;
+    text-align: center;
+    font-family: 'roboto';
+}
+
+.tonton a {
+    font-weight: 900; 
+    font-size: large;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin: 2px;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: 1.2s ease;
+}
+
+img:hover {
+    transform: scale(0.99);
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.rating {
+    color: #ffd700;
+    font-size: 16px;
+}
+
+.sinopsis {
+    font-style: italic;
+    color: #ddd;
+    text-align: justify;
+}
+
+.penjelasan {
+    color: #ddd;
+}
+
+.animescroll {
+    display: flex;
+}
+
+.animeimg {
+    height: auto;
+    border-radius: 20px;
+    margin: 9px;
+}
+
+.animeimg img {
+    height: 180px;
+    width: 115px;
+}
+
+.animeimg p {
+   text-align: center;
+   color: #ddd;
+}
+
+.amimescroll {
+    overflow-x: auto;
+}
+
+.tonton button {
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: rgba(21, 10, 10, 0.6);
+    text-decoration: none;
+    padding: 5px;
+    transition: 1.2s ease;
+}
+
+.tonton button:hover {
+    transform: scale(1.05);
+}
+
+.tonton a{
+    font-family: "roboto";
+    color: #ddd;
+}
