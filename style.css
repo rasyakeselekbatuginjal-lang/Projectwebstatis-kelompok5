@@ -1,146 +1,231 @@
 :root {
-    --primary: #3B82F6;
-    --bg: #fff;
+  --primary: #3B82F6;
+  --bg: #fff;
+  --fs-base: 1rem; /* 16px default */
 }
-
-nav {
-    height: 40px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 0 30px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid black;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-
-
-/* ini (*) buat milih semua */
 
 * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none; 
-    list-style: none;
-    scroll-behavior: smooth;
-}
-
-.tombol {
-   display: flex;
-   justify-content: flex-end;
-   width: 100%;
-   gap: 30px;
-   margin-right: 50px;
-   
-}
-
-
-.tombol li a {
-    color: var(--bg);
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
-.tombol li a:hover {
-    color: #ffd700;
-  transform: scale(1.1);
-}
-
-
-/* start desain title */
-.title {
-    display: flex;
-    margin-left: 10px;
-    align-items: center;
-}
-
-.welcome-first {
-  font-size: 33px;
-  font-weight: bold;
-  color: orange;
-}
-
-.welcome-last {
-  font-size: 33px;
-  font-weight: bold;
-  color: rgb(177, 167, 167);
-}
-
-.mono {
-    border-radius: 20px;
-    height: 180px;
-    width: 120px;
-    margin: 2px 6px;
-}
-
-#home p {
-    text-align: center;
-    font-family: "roboto", sans-serif;
-    font-size: 16px;
-    margin: 20px auto;
-}
-
-
-/* Supaya judulnya di tengah dan rapi */
-#home h1 {
-  text-align: center;
-  color: white;
-  font-family: "Poppins", sans-serif;
-}
-
-
-/* khusus nama */
-.firstname {
-    font-size: 20px;
-    font-weight: bold;
-    color: orange;
-}
-
-.lastname {
-    font-size: 20px;
-    font-weight: 500;
-    color: rgb(177, 167, 167);
-}
-
-.firstname1 { 
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.lastname1 {
-    font-size: 12px;
-    color: var(--primary);
+  margin: 0;
+  padding: 0;
+  text-decoration: none; 
+  list-style: none;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
   background: url('gambar/wp6554446.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
-  font-style: 'roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: var(--fs-base);
+  line-height: 1.6;
 }
 
+/* NAVBAR */
+nav {
+  height: 8vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.firstname {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: orange;
+}
+
+.lastname {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: rgb(242, 242, 242);
+}
+
+
+.tombol {
+  display: flex;
+  gap: 2rem;
+}
+
+.tombol li a {
+  color: var(--bg);
+  transition: transform 0.3s ease;
+}
+
+.tombol li a:hover {
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+.welcome-first {
+  font-size: 2.30 rem;
+  font-weight: bold;
+  color: orange;
+}
+
+.welcome-last {
+  font-size: 2.30rem;
+  font-weight: 500;
+  color: rgb(177, 167, 167);
+}
+/* HERO SECTION */
+#home {
+  padding: 5% 1%;
+}
+
+#home h1 {
+  text-align: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+#home p {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "poppins";
+  margin: 1.25rem auto;
+  max-width: 800px;
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.mono {
+  border-radius: 1rem;
+  max-width: 9%;
+  width: 20%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.mono:hover {
+  transform: scale(1.05);
+}
+
+
+
+/* KOTAK SECTION */
 .kotak {
-  background-color: rgba(0, 0, 0, 0.8); /* semi-transparan supaya teks lebih terbaca */
-  border: 1px solid rgba(255,255,255,0.3); 
-  border-radius: 10px;
-  margin: 50px;
-  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 0.75rem;
+  margin: 5% auto;
+  padding: 3%;
+  max-width: 90%;
+  text-align: center;
 }
 
 .kotak a {
-    color: #b390e8;
+  color: #b390e8;
+}
+
+.firstname1 { 
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.lastname1 {
+  font-size: 0.9rem;
+  color: var(--primary);
 }
 
 img {
-    width: 100%;
-    height: 50%;
-    object-fit: cover;
-    transition: 1.2s ease;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
 img:hover {
-    transform: scale(0.99);
+  transform: scale(0.98);
 }
 
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2% 5%;
+  background: rgba(0,0,0,0.6);
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .tombol {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right:0,7rem;
+  }
+
+  .gallery {
+    gap: 0.5rem;
+  }
+
+  .mono {
+    width: 10%;
+    max-width: none;
+  }
+
+  #home h1 {
+    font-size: clamp(1.2rem, 6vw, 2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .tombol {
+    margin-left: 5%;
+    font-size: 70%;
+  }
+  
+  
+  
+  .mono {
+    width: 8%;
+    height: 30%;
+  }
+
+  .kotak h2 {
+    font-size: 80%;
+  }
+
+  .kotak p {
+    font-size: 75%;
+  }
+
+  .kotak a {
+    font-size: 70%;
+  }
+  /* loh kok gk bisa yg bawah */
+  .kotak a .firstname1 .lastname1 {
+    font-size: 70%;
+  }
+} 

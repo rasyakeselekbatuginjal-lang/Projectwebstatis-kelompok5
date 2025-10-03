@@ -10,13 +10,14 @@
   text-decoration: none;
   list-style: none;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
   background: url("../gambar/wp6554446.jpg") no-repeat center center fixed;
   background-size: cover;
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Navbar */
@@ -57,7 +58,7 @@ nav {
   justify-content: flex-end;
   width: 100%;
   gap: 5%;
-  margin-right: 5%;
+  margin-right: 10%;
 }
 
 .tombol li a {
@@ -88,25 +89,25 @@ nav {
   text-align: center;
 }
 
-/* Teks */
-h2 {
-  font-size: 1.5rem;
+.kotak h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1%;
+}
+
+.kotak .sinopsis,
+.kotak .penjelasan {
+    font-size: 1rem;
+    margin-bottom: 1%;
 }
 
 .rating {
-  color: #ffd700;
-  font-size: 1rem;
+    color: #ffd700  ;
+    font-size: 0.95rem;
+    margin-bottom: 1%;
+    font-weight: bold;
 }
 
-.sinopsis {
-  font-style: italic;
-  color: #ddd;
-  text-align: justify;
-}
-
-.penjelasan {
-  color: #ddd;
-}
+/* Teks */
 
 .tonton a {
   display: inline-block;
@@ -114,10 +115,13 @@ h2 {
   font-size: 1rem;
   padding: 0.5em 1em;
   margin-top: 0.5em;
-  border-radius: 8px;
-  background-color: rgba(21, 10, 10, 0.6);
+  border-radius: 12px;
+  background-color: rgba(12, 12, 91, 0.6);
   transition: 0.3s ease;
   color: #ddd;
+  box-shadow: -13px -5px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: -13px -5px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -13px -5px 5px 0px rgba(0,0,0,0.75);
 }
 
 .tonton a:hover {
@@ -126,7 +130,11 @@ h2 {
   color: #fff;
 }
 
-/* Gambar */
+.btn-tonton {
+  font-size: 1.4rem;
+}
+
+/* Gambar umum */
 img {
   width: 100%;
   height: auto;
@@ -134,13 +142,16 @@ img {
   border-radius: 10px;
   object-fit: cover;
   transition: 0.8s ease;
+  box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
+-webkit-box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
+-moz-box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
 }
 
 img:hover {
   transform: scale(0.99);
 }
 
-/* Honorable Mention */
+/* Honorable Mention (scroll horizontal) */
 .animescroll {
   display: flex;
   overflow-x: auto;
@@ -150,39 +161,48 @@ img:hover {
 
 .animeimg {
   flex: 0 0 auto;
-  margin: 1%;
+  width: 20%;
+  height: 180px;
+  text-align: center;
 }
 
 .animeimg img {
-  height: 30vh;
-  width: auto;
+  width: 100%;
+  height: auto;
+  border-radius: 8%;
 }
 
 .animeimg p {
   text-align: center;
   color: #ddd;
   font-size: 0.9rem;
+  margin-top: 5px;
 }
+
+
+
 
 /* ---------------------- */
 /* 📱 MEDIA QUERIES */
 /* ---------------------- */
 
-/* Mobile (max 600px) */
+/* Mobile (max 600px) → 2 gambar sejajar */
 @media screen and (max-width: 600px) {
   nav {
-    flex-direction: column;
+    flex-direction: row;
     height: auto;
     padding: 2% 5%;
   }
 
   .title {
+    font-size: 16px;
     margin-bottom: 5%;
     justify-content: center;
   }
 
   .tombol {
-    flex-direction: column;
+    font-size: 14px;
+    flex-direction: row;
     align-items: center;
     margin-right: 0;
     gap: 10px;
@@ -201,12 +221,12 @@ img:hover {
     font-size: 0.9rem;
   }
 
-  .animeimg img {
-    height: 25vh;
+  .animeimg {
+    width: 45%;
   }
 }
 
-/* Tablet (max 900px) */
+/* Tablet (max 900px) → 3–4 gambar sejajar */
 @media screen and (max-width: 900px) {
   .kotak {
     margin: 5% 4%;
@@ -225,9 +245,13 @@ img:hover {
   p {
     font-size: 1rem;
   }
+
+  .animeimg {
+    width: 30%;
+  }
 }
 
-/* Desktop Besar (min 1200px) */
+/* Desktop Besar (min 1200px) → 6–7 gambar sejajar */
 @media screen and (min-width: 1200px) {
   .kotak, .kotak1 {
     max-width: 70%;
@@ -240,5 +264,9 @@ img:hover {
 
   h2 {
     font-size: 1.6rem;
+  }
+
+  .animeimg {
+    width: 12%;
   }
 }
