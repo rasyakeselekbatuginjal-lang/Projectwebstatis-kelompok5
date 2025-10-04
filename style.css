@@ -1,5 +1,5 @@
 :root {
-  --primary: #3B82F6;
+  --primary: #3b82f6;
   --bg: #fff;
   --fs-base: 1rem; /* 16px default */
 }
@@ -7,14 +7,14 @@
 * {
   margin: 0;
   padding: 0;
-  text-decoration: none; 
+  text-decoration: none;
   list-style: none;
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
 
 body {
-  background: url('gambar/wp6554446.jpg') no-repeat center center fixed;
+  background: url("gambar/wp6554446.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   font-family: "Roboto", sans-serif;
@@ -54,7 +54,6 @@ nav {
   color: rgb(242, 242, 242);
 }
 
-
 .tombol {
   display: flex;
   gap: 2rem;
@@ -71,13 +70,13 @@ nav {
 }
 
 .welcome-first {
-  font-size: 2.30 rem;
+  font-size: 2.3 rem;
   font-weight: bold;
   color: orange;
 }
 
 .welcome-last {
-  font-size: 2.30rem;
+  font-size: 2.3rem;
   font-weight: 500;
   color: rgb(255, 255, 255);
 }
@@ -122,12 +121,10 @@ nav {
   transform: scale(1.05);
 }
 
-
-
 /* KOTAK SECTION */
 .kotak {
   background-color: rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 0.75rem;
   margin: 5% auto;
   padding: 3%;
@@ -139,7 +136,7 @@ nav {
   color: #b390e8;
 }
 
-.firstname1 { 
+.firstname1 {
   font-size: 0.9rem;
   font-weight: 600;
 }
@@ -164,7 +161,7 @@ img:hover {
 footer {
   text-align: center;
   padding: 2% 5%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   margin-top: 2rem;
   font-size: 0.9rem;
 }
@@ -187,15 +184,18 @@ footer {
     margin-right: 5%;
   }
 
-  .firstname, .lastname {
-  font-size: 2.5rem;
+  .firstname,
+  .lastname {
+    font-size: 2.5rem;
   }
 
-.firstname1, .lastname1 {
-  font-size: large;
-}
+  .firstname1,
+  .lastname1 {
+    font-size: large;
+  }
 
-  .welcome-first, .welcome-last {
+  .welcome-first,
+  .welcome-last {
     font-size: 3rem;
   }
 
@@ -212,22 +212,25 @@ footer {
   }
 }
 
-
-
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   nav {
     display: flex;
     flex-direction: row;
     height: auto;
     padding: 1rem;
+    font-size: 2rem;
   }
 
-  .tombol {
+  nav  {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
     margin-top: 0.5rem;
-    margin-right:0,7rem;
+    margin-right: 0, 7rem;
+  }
+
+  .tombol li a {
+    font-size: clamp(8rem, 3vw, 1.1rem);
   }
 
   .gallery {
@@ -235,7 +238,7 @@ footer {
   }
 
   .mono {
-    width: 10%;
+    width: 9%;
     max-width: none;
   }
 
@@ -249,9 +252,7 @@ footer {
     margin-left: 5%;
     font-size: 70%;
   }
-  
-  
-  
+
   .mono {
     width: 9%;
     height: 100%;
@@ -272,4 +273,4 @@ footer {
   .kotak a .firstname1 .lastname1 {
     font-size: 70%;
   }
-} 
+}
