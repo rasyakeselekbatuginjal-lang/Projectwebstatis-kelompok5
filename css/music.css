@@ -1,0 +1,170 @@
+:root {
+  --primary: #3B82F6;
+  --bg: #fff;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../gambar/wp6554446.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 5%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  flex-wrap: wrap;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.firstname,
+.lastname {
+  font-size: clamp(1rem, 2vw, 2.5rem);
+}
+
+.firstname {
+  color: #f3f3f3;
+}
+
+.lastname {
+  color: orange;
+}
+
+/* Tombol nav */
+.tombol {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  gap: clamp(0.5rem, 2vw, 2rem);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tombol li a {
+  color: var(--bg);
+  display: inline-block;
+  font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+  transition: transform 0.3s ease;
+}
+
+.tombol li a:hover {
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+/* Section Kotak */
+.kotak {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  margin: 3% auto 3% 5%;
+  padding: 2%;
+  max-width: 60%;
+}
+
+.kotak h2 {
+  font-size: clamp(1rem, 2vw, 2.5rem);
+  margin-bottom: 1%;
+}
+
+.kotak p {
+  font-size: clamp(0.8rem, 1vw, 1.5rem);
+  margin-bottom: 1%;
+}
+
+.kotak .rating {
+  font-weight: bold;
+  font-size: clamp(0.8rem, 1vw, 1.4rem);
+  margin-bottom: 1%;
+}
+
+.kotak img {
+  width: 50%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+
+}
+
+/* Global Image */
+img {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: 0.8s ease;
+  box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
+}
+
+img:hover {
+  transform: scale(0.99);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2% 0;
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
+}
+
+/* Responsive Breakpoints */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .tombol {
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  .musicimg {
+    width: 25%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+  }
+
+  .tombol {
+    width: 80%;
+    justify-content: space-around;
+    margin: 0.5rem 0;
+  }
+
+  .musicimg {
+    width: 40%;
+  }
+
+  .kotak {
+    width: 95%;
+    padding: 4%;
+  }
+}
+
