@@ -209,20 +209,20 @@ footer {
   
   
   .mono {
-    width: 8%;
-    height: 30%;
+    width: 9%;
+    height: 100%;
   }
 
   .kotak h2 {
-    font-size: 80%;
+    font-size: 110%;
   }
 
   .kotak p {
-    font-size: 75%;
+    font-size: 85%;
   }
 
   .kotak a {
-    font-size: 70%;
+    font-size: 100%;
   }
   /* loh kok gk bisa yg bawah */
   .kotak a .firstname1 .lastname1 {

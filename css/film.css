@@ -36,20 +36,18 @@ nav {
 
 .title {
   display: flex;
-  margin-left: 2%;
   align-items: center;
+  font-weight: bold;
 }
 
 .firstname {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: orange;
+  font-size: 1.2rem;  /* default buat HP */
+  color: #f3f3f3;
 }
 
 .lastname {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: rgb(177, 167, 167);
+  font-size: 1.2rem;  /* default buat HP */
+  color: yellow;
 }
 
 /* Tombol nav */
@@ -59,6 +57,7 @@ nav {
   width: 100%;
   gap: 5%;
   margin-right: 10%;
+  align-items: center;
 }
 
 .tombol li a {
@@ -105,26 +104,51 @@ nav {
     border-radius: 1rem;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  margin: 1%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: 0.8s ease;
+  box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
+  -webkit-box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
+  -moz-box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
+}
+
+img:hover {
+  transform: scale(0.99);
+}
+
 /* Horizontal Scroll Gallery */
-.animescroll {
-    display: flex;
-    overflow-x: auto;
-    gap: 2%;
-    padding: 1% 0;
+.filmscroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 1%;
+  padding: 2% 0%;
+  align-items: center;
 }
 
-.animeimg {
-    flex: 0 0 auto;
-    width: 18%;
-    text-align: center;
+.filmimg {
+  flex: 0 0 auto;
+  width: 15%;
+  height: 50%;
+  aspect-ratio: 2/3;
+  text-align: center;
 }
 
-.animeimg img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
+.filmimg img {
+  width: 100%;
+  height: auto;
+  border-radius: 8%;
 }
 
+.filmimg p {
+  text-align: center;
+  color: #ddd;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
 
 
 /* Footer */
@@ -133,9 +157,10 @@ footer {
     padding: 2% 0;
 }
 
-/* Responsive for tablets */
+/* Responsive untul tablet cuy */
 @media (max-width: 1024px) {
     nav ul.tombol {
+
         gap: 4%;
     }
     .animeimg {
@@ -143,32 +168,99 @@ footer {
     }
 }
 
-/* Responsive for mobile */
-@media (max-width: 768px) {
+/* Responsive untul mobile cuy */
+@media (max-width: 769px) {
     nav {
-        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 8px;
+        flex-direction: row;
         align-items: flex-start;
     }
+
+    .title {
+      display: flex;
+      align-items: center;
+    }
+
+     .firstname, .lastname {
+    font-size: 1.2rem;
+  }
+
     nav ul.tombol {
-        flex-direction: column;
-        width: 100%;
+        flex-direction: row;
+        width: 50%;
         gap: 1%;
+        margin-right: 0%;
     }
     .kotak {
         width: 95%;
         padding: 4%;
     }
-    .animeimg {
-        width: 40%;
+
+    .filmimg p {
+      font-size: x-small;
     }
+}
+
+@media (max-width: 480px) {
+  .firstname, .lastname {
+    font-size: 0.8rem;
+  }
+
+  nav .tombol {
+    font-size: 0.5rem;
+  }
+
+  nav {
+    height: auto;
+  }
+
+  .animeimg, img {
+    width: 1000%;
+  }
+
+  .kotak p {
+    font-size: 0.8rem;
+  }
+
+  .kotak .rating {
+    font-size: 0.6rem;
+  }
+
+  .filmimg p {
+    font-size: 0.5rem;
+  }
 }
 
 /* Responsive for very large screens */
 @media (min-width: 1600px) {
-    .kotak {
-        width: 70%;
+    .firstname, .lastname {
+      font-size: 3.2rem;
     }
+    nav .tombol {
+      font-size: 40;
+    }
+    .kotak {
+        width: 100%;
+    }
+
+    .kotak h2 {
+      font-size: 3.5rem;
+    }
+
+    .kotak p {
+      font-size: 2rem;
+    }
+
+    .kotak .rating {
+      font-size: 1.9rem;
+    }
+
+
     .animeimg {
         width: 12%;
     }
+
+  
 }

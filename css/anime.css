@@ -98,10 +98,12 @@ nav {
 .kotak .penjelasan {
     font-size: 1rem;
     margin-bottom: 1%;
+    color: rgb(221, 210, 210);
+    font-family: "roboto";
 }
 
 .rating {
-    color: #ffd700  ;
+    color: #ffd700;
     font-size: 0.95rem;
     margin-bottom: 1%;
     font-weight: bold;
@@ -120,8 +122,8 @@ nav {
   transition: 0.3s ease;
   color: #ddd;
   box-shadow: -13px -5px 5px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: -13px -5px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: -13px -5px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -13px -5px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -13px -5px 5px 0px rgba(0,0,0,0.75);
 }
 
 .tonton a:hover {
@@ -143,8 +145,8 @@ img {
   object-fit: cover;
   transition: 0.8s ease;
   box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
--webkit-box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
--moz-box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
+  -webkit-box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
+  -moz-box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
 }
 
 img:hover {
@@ -157,12 +159,13 @@ img:hover {
   overflow-x: auto;
   gap: 3%;
   padding: 2% 0;
+  margin-bottom: 0%;
 }
 
 .animeimg {
   flex: 0 0 auto;
   width: 20%;
-  height: 180px;
+  height: 80%;
   text-align: center;
 }
 
@@ -191,7 +194,7 @@ img:hover {
   nav {
     flex-direction: row;
     height: auto;
-    padding: 2% 5%;
+    padding: 2% 3%;
   }
 
   .title {
@@ -201,11 +204,11 @@ img:hover {
   }
 
   .tombol {
-    font-size: 14px;
+    font-size: 0.8rem;
     flex-direction: row;
-    align-items: center;
+    justify-content: center;
     margin-right: 0;
-    gap: 10px;
+    gap: 5px;
   }
 
   .kotak, .kotak1 {
