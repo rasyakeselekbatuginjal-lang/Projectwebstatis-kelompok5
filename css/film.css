@@ -22,16 +22,16 @@ body {
 
 /* Navbar */
 nav {
-  height: 8vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 0 5%;
+  padding: 0.5rem 5%;
   display: flex;
   align-items: center;
   border-bottom: 1px solid black;
   position: sticky;
   top: 0;
   z-index: 999;
+  flex-wrap: wrap;
 }
 
 .title {
@@ -40,29 +40,33 @@ nav {
   font-weight: bold;
 }
 
+.firstname,
+.lastname {
+  font-size: clamp(1rem, 2vw, 2.5rem);
+}
+
 .firstname {
-  font-size: 1.2rem;  /* default buat HP */
   color: #f3f3f3;
 }
 
 .lastname {
-  font-size: 1.2rem;  /* default buat HP */
-  color: yellow;
+  color: orange;
 }
 
 /* Tombol nav */
 .tombol {
   display: flex;
   justify-content: flex-end;
-  width: 100%;
-  gap: 5%;
-  margin-right: 10%;
+  flex: 1;
+  gap: clamp(0.5rem, 2vw, 2rem);
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .tombol li a {
   color: var(--bg);
   display: inline-block;
+  font-size: clamp(0.8rem, 1.2vw, 1.5rem);
   transition: transform 0.3s ease;
 }
 
@@ -74,46 +78,44 @@ nav {
 /* Section Kotak */
 .kotak {
   background-color: rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 10px;
-  margin: 5% auto;
-  padding: 3%;
+  margin: 3% auto;
+  padding: 2%;
   max-width: 90%;
 }
 
 .kotak h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1%;
+  font-size: clamp(1rem, 2vw, 2.5rem);
+  margin-bottom: 1%;
 }
 
-.kotak .sinopsis,
-.kotak .penjelasan {
-    font-size: 1rem;
-    margin-bottom: 1%;
+.kotak p {
+  font-size: clamp(0.8rem, 1vw, 1.5rem);
+  margin-bottom: 1%;
 }
 
 .kotak .rating {
-    font-size: 0.95rem;
-    margin-bottom: 1%;
-    font-weight: bold;
+  font-weight: bold;
+  font-size: clamp(0.8rem, 1vw, 1.4rem);
+  margin-bottom: 1%;
 }
 
 .kotak img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
 }
 
+/* Global Image */
 img {
   width: 100%;
   height: auto;
-  margin: 1%;
   border-radius: 10px;
   object-fit: cover;
   transition: 0.8s ease;
   box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
-  -webkit-box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
-  -moz-box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
 }
 
 img:hover {
@@ -131,8 +133,7 @@ img:hover {
 
 .filmimg {
   flex: 0 0 auto;
-  width: 15%;
-  height: 50%;
+  width: clamp(35%, 15vw, 15%);
   aspect-ratio: 2/3;
   text-align: center;
 }
@@ -146,121 +147,98 @@ img:hover {
 .filmimg p {
   text-align: center;
   color: #ddd;
-  font-size: 0.9rem;
+  font-size: clamp(0.6rem, 0.8vw, 1rem);
   margin-top: 5px;
 }
 
-
 /* Footer */
 footer {
-    text-align: center;
-    padding: 2% 0;
+  text-align: center;
+  padding: 2% 0;
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
 }
 
-/* Responsive untul tablet cuy */
+/* Responsive Breakpoints */
+
+/* Tablet */
 @media (max-width: 1024px) {
-    nav ul.tombol {
+  .tombol {
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
 
-        gap: 4%;
-    }
-    .animeimg {
-        width: 30%;
-    }
+  .filmimg {
+    width: 25%;
+  }
 }
 
-/* Responsive untul mobile cuy */
-@media (max-width: 769px) {
-    nav {
-        align-items: center;
-        justify-content: space-between;
-        padding: 5px 8px;
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .title {
-      display: flex;
-      align-items: center;
-    }
-
-     .firstname, .lastname {
-    font-size: 1.2rem;
-  }
-
-    nav ul.tombol {
-        flex-direction: row;
-        width: 50%;
-        gap: 1%;
-        margin-right: 0%;
-    }
-    .kotak {
-        width: 95%;
-        padding: 4%;
-    }
-
-    .filmimg p {
-      font-size: x-small;
-    }
-}
-
-@media (max-width: 480px) {
-  .firstname, .lastname {
-    font-size: 0.8rem;
-  }
-
-  nav .tombol {
-    font-size: 0.5rem;
-  }
-
+/* Mobile */
+@media (max-width: 768px) {
   nav {
-    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
   }
 
-  .animeimg, img {
-    width: 1000%;
+  .tombol {
+    width: 80%;
+    justify-content: space-around;
+    margin: 0.5rem 0;
+  }
+
+  .filmimg {
+    width: 40%;
+  }
+
+  .kotak {
+    width: 95%;
+    padding: 4%;
+  }
+}
+
+/* Extra Small (HP jadul / mini screen) */
+@media (max-width: 480px) {
+  .firstname,
+  .lastname {
+    font-size: 1rem;
+  }
+
+  .tombol li a {
+    font-size: 0.7rem;
+  }
+
+  .filmimg {
+    width: 60%;
   }
 
   .kotak p {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 
   .kotak .rating {
-    font-size: 0.6rem;
-  }
-
-  .filmimg p {
-    font-size: 0.5rem;
+    font-size: 0.65rem;
   }
 }
 
-/* Responsive for very large screens */
+/* Very Large Screens */
 @media (min-width: 1600px) {
-    .firstname, .lastname {
-      font-size: 3.2rem;
-    }
-    nav .tombol {
-      font-size: 40;
-    }
-    .kotak {
-        width: 100%;
-    }
+  nav .tombol {
+    margin-right: 5%;
+  }
 
-    .kotak h2 {
-      font-size: 3.5rem;
-    }
+  nav .title {
+    font-size: 2.5rem;
+  }
 
-    .kotak p {
-      font-size: 2rem;
-    }
+  .tombol li a {
+    font-size: 2rem;
+  }
 
-    .kotak .rating {
-      font-size: 1.9rem;
-    }
+  .kotak {
+    max-width: 70%;
+  }
 
-
-    .animeimg {
-        width: 12%;
-    }
-
-  
+  .filmimg {
+    width: 12%;
+  }
 }
