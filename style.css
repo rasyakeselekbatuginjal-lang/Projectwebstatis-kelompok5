@@ -166,60 +166,54 @@ footer {
   font-size: 0.9rem;
 }
 
-/* RESPONSIVE */
+/* ======== RESPONSIVE UNTUK LAYAR BESAR (min 1440px) ======== */
 @media (min-width: 1440px) {
-  .kotak h2 {
-    font-size: 2.5rem;
-  }
-
-  .kotak p {
-    font-size: 1.5rem;
-  }
-
-  .kotak a {
-    font-size: 1.5rem;
-  }
-
-  nav .tombol {
-    margin-right: 5%;
+  nav {
+    padding: 0 8%;
   }
 
   .firstname,
   .lastname {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 3vw, 3.5rem); /* 🔥 judul besar, proporsional */
   }
 
-  .firstname1,
-  .lastname1 {
-    font-size: large;
+  .tombol {
+    gap: clamp(2rem, 3vw, 4rem); /* jarak antar tombol */
+  }
+
+  .tombol li a {
+    font-size: clamp(1.3rem, 2vw, 2rem); /* 🔥 tombol besar di layar gede */
+  }
+
+  .kotak h2 {
+    font-size: 2rem;
+  }
+
+  .kotak p,
+  .kotak a {
+    font-size: 1.25rem;
   }
 
   .welcome-first,
   .welcome-last {
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 3vw, 3.5rem);
   }
 
-  .tombol li a {
-    font-size: 1.5rem;
+  .gallery {
+    gap: 1.5rem;
   }
 
-  .kotak {
-    max-width: 90%;
+  .mono {
+    max-width: 8%;
   }
 
-  .filmimg {
-    width: 12%;
+  footer {
+    font-size: 1rem;
   }
 }
 
+
 @media (max-width: 720px) {
-  nav {
-    display: flex;
-    flex-direction: row;
-    height: auto;
-    padding: 1rem;
-    font-size: 2rem;
-  }
 
   nav  {
     display: flex;
@@ -247,30 +241,60 @@ footer {
   }
 }
 
+/* ======== RESPONSIVE UNTUK HP (max 480px) ======== */
 @media (max-width: 480px) {
-  .tombol {
-    margin-left: 5%;
-    font-size: 70%;
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 10px 0;
   }
 
+  .title {
+    text-align: center;
+  }
+
+  .firstname,
+  .lastname {
+    font-size: clamp(1.5rem, 6vw, 2.2rem); /* 🔥 lebih besar tapi tetap adaptif */
+  }
+
+  .tombol {
+    display: flex;
+    justify-content: center;
+    gap: clamp(0.8rem, 3vw, 1.2rem);
+    flex-wrap: wrap;
+  }
+
+  .tombol li a {
+    font-size: clamp(1rem, 4vw, 1.3rem); /* 🔥 tombol besar pas di jempol */
+  }
+
+  /* isi lainnya */
   .mono {
-    width: 9%;
-    height: 100%;
+    width: 40%;
+    max-width: none;
   }
 
   .kotak h2 {
-    font-size: 110%;
+    font-size: 1.1rem;
   }
 
   .kotak p {
-    font-size: 85%;
+    font-size: 0.85rem;
   }
 
   .kotak a {
-    font-size: 100%;
+    font-size: 0.9rem;
   }
-  /* loh kok gk bisa yg bawah */
-  .kotak a .firstname1 .lastname1 {
-    font-size: 70%;
+
+  .firstname1,
+  .lastname1 {
+    font-size: 0.8rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
   }
 }

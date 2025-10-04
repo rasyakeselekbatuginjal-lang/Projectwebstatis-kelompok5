@@ -192,13 +192,15 @@ img:hover {
 /* Mobile (max 600px) → 2 gambar sejajar */
 @media screen and (max-width: 600px) {
   nav {
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
     height: auto;
     padding: 2% 3%;
   }
 
   .title {
-    font-size: 16px;
+    font-size: 1rem;
     margin-bottom: 5%;
     justify-content: center;
   }

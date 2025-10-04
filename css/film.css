@@ -198,8 +198,15 @@ footer {
 
 /* Extra Small (HP jadul / mini screen) */
 @media (max-width: 480px) {
-  .firstname,
-  .lastname {
+  nav {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 10px 0;
+  }
+
+  .firstname, .lastname {
     font-size: 1rem;
   }
 
