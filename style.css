@@ -24,7 +24,7 @@ body {
 
 /* NAVBAR */
 nav {
-  height: 8vh;
+  height: auto;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 0 5%;
@@ -70,19 +70,18 @@ nav {
 }
 
 .welcome-first {
-  font-size: 2.3 rem;
+  font-size: 95%;
   font-weight: bold;
   color: orange;
 }
 
 .welcome-last {
-  font-size: 2.3rem;
-  font-weight: 500;
+  font-size: 95%;
   color: rgb(255, 255, 255);
 }
 /* HERO SECTION */
 #home {
-  padding: 5% 1%;
+  padding: 3% 1%;
 }
 
 #home h1 {
@@ -167,44 +166,123 @@ footer {
 }
 
 /* ======== RESPONSIVE UNTUK LAYAR BESAR (min 1440px) ======== */
+@media (min-width: 2000px) {
+  nav {
+    padding: 0 10%;
+  }
+
+ nav .tombol {
+    gap: 30%;
+  }
+
+  nav .tombol li a {
+    font-size: 2.3rem;
+  }
+
+  nav .title, .firstname,
+  .lastname {
+    font-size: 2.1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+   p {
+    font-size: 1.8rem;
+  }
+
+  #home h1 {
+  font-size: 3.4rem;
+}
+
+  #home p {
+    font-size: 2rem;
+  }
+
+  #home a {
+    font-size: 2rem;
+  }
+
+  #anime  {
+    font-size: 3.5rem;
+  }
+
+  div.kotak p {
+    font-size: 2.6rem;
+  }
+
+  div.kotak a {
+    font-size: 2.6rem;
+  }
+
+  .firstname1, .lastname1 {
+    font-size: 2.4rem;
+  }
+
+  #film {
+    font-size: 3.5rem;
+  }
+
+  #game {
+    font-size: 3.5rem;
+  }
+
+  #music {
+    font-size: 3.5rem;
+  }
+}
+
 @media (min-width: 1440px) {
   nav {
     padding: 0 8%;
   }
 
-  .firstname,
+  nav .tombol {
+    gap: 30%;
+  }
+
+  nav .title, .firstname,
   .lastname {
-    font-size: clamp(2rem, 3vw, 3.5rem); /* 🔥 judul besar, proporsional */
+    font-size: 3rem;
+  }
+  nav .tombol {
+    gap: 20%;
   }
 
-  .tombol {
-    gap: clamp(2rem, 3vw, 4rem); /* jarak antar tombol */
-  }
-
-  .tombol li a {
-    font-size: clamp(1.3rem, 2vw, 2rem); /* 🔥 tombol besar di layar gede */
-  }
-
-  .kotak h2 {
+  nav .tombol li a {
     font-size: 2rem;
   }
 
-  .kotak p,
-  .kotak a {
-    font-size: 1.25rem;
+  #home p {
+    font-size: 1.7rem;
   }
 
-  .welcome-first,
-  .welcome-last {
-    font-size: clamp(2.5rem, 3vw, 3.5rem);
+  #home a {
+    font-size: 1.7rem;
+  }
+
+  div.kotak h2 {
+    font-size: 2.3rem;
+  }
+
+  div.kotak p {
+    font-size: 1.9rem;
+  }
+  div.kotak a {
+    font-size: 1.9rem;
+  }
+
+  .firstname1, .lastname1 {
+    font-size: 1.7rem;
   }
 
   .gallery {
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .mono {
-    max-width: 8%;
+    width: 10%;
   }
 
   footer {
@@ -213,18 +291,18 @@ footer {
 }
 
 
-@media (max-width: 720px) {
+@media (max-width: 750px) {
 
   nav  {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
     margin-top: 0.5rem;
-    margin-right: 0, 7rem;
+    margin-right: 0.7rem;
   }
 
   .tombol li a {
-    font-size: clamp(8rem, 3vw, 1.1rem);
+    font-size: clamp(1.1rem, 3vw, 8rem);
   }
 
   .gallery {
@@ -243,6 +321,7 @@ footer {
 
 /* ======== RESPONSIVE UNTUK HP (max 480px) ======== */
 @media (max-width: 480px) {
+
   nav {
     flex-direction: column;
     justify-content: center;
@@ -271,9 +350,13 @@ footer {
     font-size: clamp(1rem, 4vw, 1.3rem); /* 🔥 tombol besar pas di jempol */
   }
 
+  .kotak a{
+    font-size: 2rem;
+  }
+
   /* isi lainnya */
   .mono {
-    width: 40%;
+    width: 30%;
     max-width: none;
   }
 
@@ -296,5 +379,9 @@ footer {
 
   footer {
     font-size: 0.8rem;
+  }
+
+  .kotak, .gambar {
+    width: 90%;
   }
 }
