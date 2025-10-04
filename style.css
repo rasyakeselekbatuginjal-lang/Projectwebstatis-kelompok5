@@ -79,7 +79,7 @@ nav {
 .welcome-last {
   font-size: 2.30rem;
   font-weight: 500;
-  color: rgb(177, 167, 167);
+  color: rgb(255, 255, 255);
 }
 /* HERO SECTION */
 #home {
@@ -170,6 +170,50 @@ footer {
 }
 
 /* RESPONSIVE */
+@media (min-width: 1440px) {
+  .kotak h2 {
+    font-size: 2.5rem;
+  }
+
+  .kotak p {
+    font-size: 1.5rem;
+  }
+
+  .kotak a {
+    font-size: 1.5rem;
+  }
+
+  nav .tombol {
+    margin-right: 5%;
+  }
+
+  .firstname, .lastname {
+  font-size: 2.5rem;
+  }
+
+.firstname1, .lastname1 {
+  font-size: large;
+}
+
+  .welcome-first, .welcome-last {
+    font-size: 3rem;
+  }
+
+  .tombol li a {
+    font-size: 1.5rem;
+  }
+
+  .kotak {
+    max-width: 90%;
+  }
+
+  .filmimg {
+    width: 12%;
+  }
+}
+
+
+
 @media (max-width: 768px) {
   nav {
     display: flex;
