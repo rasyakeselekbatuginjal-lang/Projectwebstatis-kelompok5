@@ -192,7 +192,11 @@ img:hover {
 /* Mobile (max 600px) → 2 gambar sejajar */
 @media screen and (max-width: 600px) {
   nav {
-   justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 10px 0;
   }
 
   nav .title {
