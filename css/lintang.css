@@ -1,184 +1,276 @@
 :root {
-    --primary: #3B82F6;
-    --bg: #fff;
+  --primary: #3B82F6;
+  --bg: #fff;
 }
 
-nav {
-    height: 40px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 0 30px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid black;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-
-
-/* ini (*) buat milih semua */
-
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none; 
-    list-style: none;
-    scroll-behavior: smooth;
-}
-
-.tombol {
-   display: flex;
-   justify-content: flex-end;
-   width: 100%;
-   gap: 30px;
-   margin-right: 50px;
-   
-}
-
-
-.tombol li a {
-    color: var(--bg);
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
-.tombol li a:hover {
-    color: #ffd700;
-  transform: scale(1.1);
-}
-
-
-/* start desain title */
-.title {
-    display: flex;
-    margin-left: 10px;
-    align-items: center;
-}
-/* khusus nama */
-.firstname {
-    font-size: 20px;
-    font-weight: bold;
-    color: orange;
-}
-
-.lastname {
-    font-size: 20px;
-    font-weight: 500;
-    color: rgb(177, 167, 167);
-}
-
-.firstname1 { 
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.lastname1 {
-    font-size: 12px;
-    color: var(--primary);
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
   background: url("../gambar/wp6554446.jpg") no-repeat center center fixed;
   background-size: cover;
   color: white;
+  font-family: "Roboto", sans-serif;
 }
 
+/* Navbar */
+nav {
+  height: 8vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.title {
+  display: flex;
+  margin-left: 2%;
+  align-items: center;
+}
+
+.firstname {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: orange;
+}
+
+.lastname {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgb(177, 167, 167);
+}
+
+/* Tombol nav */
+.tombol {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 5%;
+  margin-right: 10%;
+}
+
+.tombol li a {
+  color: var(--bg);
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.tombol li a:hover {
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+/* Kotak konten */
 .kotak {
-  background-color: rgba(0, 0, 0, 0.6); /* semi-transparan supaya teks lebih terbaca */
+  background-color: rgba(0, 0, 0, 0.6);
   border: 1px solid rgba(255,255,255,0.3);
   border-radius: 10px;
-  margin: 50px;
-  padding: 25px;
-}
-
-.kotak a {
-    color: #b390e8;
+  margin: 5% auto;
+  padding: 3%;
+  max-width: 90%;
 }
 
 .kotak1 {
-    background-color: rgba(0, 0, 0, 0.6); ;
-    border: 1px solid rgba(255,255,255,0.3);
-    padding: 10px;
-    text-align: center;
-    font-family: 'roboto';
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 2%;
+  text-align: center;
 }
 
-.tonton a {
-    font-weight: 900; 
-    font-size: large;
+.kotak h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1%;
 }
 
-img {
-    width: 100%;
-    height: auto;
-    margin: 2px;
-    border-radius: 20px;
-    object-fit: cover;
-    transition: 1.2s ease;
-}
-
-img:hover {
-    transform: scale(0.99);
-}
-
-h2 {
-    font-size: 20px;
+.kotak .sinopsis,
+.kotak .penjelasan {
+    font-size: 1rem;
+    margin-bottom: 1%;
+    color: rgb(221, 210, 210);
+    font-family: "roboto";
 }
 
 .rating {
     color: #ffd700;
-    font-size: 16px;
+    font-size: 0.95rem;
+    margin-bottom: 1%;
+    font-weight: bold;
 }
 
-.sinopsis {
-    font-style: italic;
-    color: #ddd;
-    text-align: justify;
+/* Teks */
+
+.tonton a {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  margin-top: 0.5em;
+  border-radius: 12px;
+  background-color: rgba(12, 12, 91, 0.6);
+  transition: 0.3s ease;
+  color: #ddd;
+  box-shadow: -13px -5px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -13px -5px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -13px -5px 5px 0px rgba(0,0,0,0.75);
 }
 
-.penjelasan {
-    color: #ddd;
+.tonton a:hover {
+  transform: scale(1.05);
+  background-color: var(--primary);
+  color: #fff;
 }
 
+.btn-tonton {
+  font-size: 1.4rem;
+}
+
+/* Gambar umum */
+img {
+  width: 100%;
+  height: auto;
+  margin: 1%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: 0.8s ease;
+  box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
+  -webkit-box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
+  -moz-box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
+}
+
+img:hover {
+  transform: scale(0.99);
+}
+
+/* Honorable Mention (scroll horizontal) */
 .animescroll {
-    display: flex;
+  display: flex;
+  overflow-x: auto;
+  gap: 3%;
+  padding: 2% 0;
+  margin-bottom: 0%;
 }
 
 .animeimg {
-    height: auto;
-    border-radius: 20px;
-    margin: 9px;
+  flex: 0 0 auto;
+  width: 20%;
+  height: 80%;
+  text-align: center;
 }
 
 .animeimg img {
-    height: 180px;
-    width: 115px;
+  width: 100%;
+  height: auto;
+  border-radius: 8%;
 }
 
 .animeimg p {
-   text-align: center;
-   color: #ddd;
+  text-align: center;
+  color: #ddd;
+  font-size: 0.9rem;
+  margin-top: 5px;
 }
 
-.amimescroll {
-    overflow-x: auto;
+
+
+
+/* ---------------------- */
+/* 📱 MEDIA QUERIES */
+/* ---------------------- */
+
+/* Mobile (max 600px) → 2 gambar sejajar */
+@media screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 10px 0;
+  }
+
+  nav .title {
+    font-size: 0.2rem;
+    justify-content: center;
+  }
+
+  .tombol {
+    font-size: 0.8rem;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 0;
+    gap: 5px;
+  }
+
+  .kotak, .kotak1 {
+    margin: 5% 3%;
+    padding: 5%;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .animeimg {
+    width: 45%;
+  }
 }
 
-.tonton button {
-    margin-top: 5px;
-    border-radius: 10px;
-    background-color: rgba(21, 10, 10, 0.6);
-    text-decoration: none;
-    padding: 5px;
-    transition: 1.2s ease;
+/* Tablet (max 900px) → 3–4 gambar sejajar */
+@media screen and (max-width: 900px) {
+  .kotak {
+    margin: 5% 4%;
+    padding: 4%;
+  }
+
+  .tombol {
+    gap: 3%;
+    margin-right: 2%;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .animeimg {
+    width: 30%;
+  }
 }
 
-.tonton button:hover {
-    transform: scale(1.05);
-}
+/* Desktop Besar (min 1200px) → 6–7 gambar sejajar */
+@media screen and (min-width: 1200px) {
+  .kotak, .kotak1 {
+    max-width: 70%;
+    margin: 3% auto;
+  }
 
-.tonton a{
-    font-family: "roboto";
-    color: #ddd;
+  p {
+    font-size: 1.1rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .animeimg {
+    width: 12%;
+  }
 }

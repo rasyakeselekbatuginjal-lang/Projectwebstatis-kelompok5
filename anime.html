@@ -17,16 +17,29 @@
 <body>
   <!-- Navbar -->
   <nav>
+    <ul class="sidebar">
+      <li onclick=hidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708z"/>
+      </svg></a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="anime.html">Anime</a></li>
+      <li><a href="index.html#game">Game</a></li>
+      <li><a href="index.html#film">Film</a></li>
+    </ul>
+    
     <div class="title">
       <div class="firstname">Recomendation</div>
       <div class="lastname">Hunt</div>
     </div>
 
     <ul class="tombol">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="anime.html">Anime</a></li>
-      <li><a href="index.html#game">Game</a></li>
-      <li><a href="index.html#film">Film</a></li>
+      <li class="halamanutama"><a href="index.html">Home</a></li>
+      <li class="halamanutama"><a href="anime.html">Anime</a></li>
+      <li class="halamanutama"><a href="index.html#game">Game</a></li>
+      <li class="halamanutama"><a href="index.html#film">Film</a></li>
+      <li class="menubutton" onclick=showsidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+</svg></a></li>
     </ul>
   </nav>
 
@@ -203,5 +216,16 @@
   <footer>
     <p>© 2025 Recomendation Hunt | All rights reserved</p>
   </footer>
+
+  <script>
+    function showsidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'}
+
+    function hidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+    }
+  </script>
 </body>
 </html>

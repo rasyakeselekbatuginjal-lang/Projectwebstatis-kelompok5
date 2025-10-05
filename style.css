@@ -27,7 +27,7 @@ nav {
   height: auto;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 0 5%;
+  padding: 0% 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -53,6 +53,50 @@ nav {
   font-weight: bold;
   color: rgb(242, 242, 242);
 }
+/* hambugrer */
+/* hamburger */
+.sidebar {
+  font-family: "roboto";
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: 10px;
+  display: none; 
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10%;
+}
+
+.sidebar a {
+  margin-left: 1rem;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.sidebar li {
+  width: 100%;
+  text-decoration: none;
+}
+
+.menubutton {
+  display: none;
+}
+
 
 .tombol {
   display: flex;
@@ -165,23 +209,25 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ======== RESPONSIVE UNTUK LAYAR BESAR (min 1440px) ======== */
+/* media query */
 @media (min-width: 2000px) {
   nav {
     padding: 0 10%;
   }
 
- nav .tombol {
-    gap: 30%;
+ nav .tombol, .halamanutama {
+    gap: 50%;
+    font-size: 3rem;
+    align-items: center;
   }
 
-  nav .tombol li a {
-    font-size: 2.3rem;
+   .tombol li a {
+    font-size: 10rem;
   }
 
   nav .title, .firstname,
   .lastname {
-    font-size: 2.1rem;
+    font-size: 4rem;
   }
 
   h1 {
@@ -238,20 +284,17 @@ footer {
     padding: 0 8%;
   }
 
-  nav .tombol {
-    gap: 30%;
-  }
-
   nav .title, .firstname,
   .lastname {
-    font-size: 3rem;
+    font-size: 2rem;
   }
+
   nav .tombol {
-    gap: 20%;
+    gap: 8%;
   }
 
   nav .tombol li a {
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
 
   #home p {
@@ -290,32 +333,50 @@ footer {
   }
 }
 
+@media screen and (max-width: 750px) {
 
-@media (max-width: 750px) {
-
-  nav  {
-    display: flex;
+  nav {
     flex-direction: row;
+    align-items: center;
     gap: 0.5rem;
-    margin-top: 0.5rem;
-    margin-right: 0.7rem;
+    padding: 0% 5%;
   }
 
-  .tombol li a {
-    font-size: clamp(1.1rem, 3vw, 8rem);
+  nav .title, .firstname, .lastname {
+    font-size: 1.5rem;
   }
 
-  .gallery {
-    gap: 0.5rem;
+  .halamanutama {
+    display: none;
   }
 
-  .mono {
-    width: 9%;
-    max-width: none;
+  .menubutton {
+    display: block;
   }
 
-  #home h1 {
-    font-size: clamp(1.2rem, 6vw, 2rem);
+  .tombol {
+    font-size: 0.8rem;
+    flex-direction: row;
+    margin-right: 0;
+    gap: 5px;
+  }
+
+
+  .kotak, .kotak1 {
+    margin: 5% 3%;
+    padding: 5%;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .animeimg {
+    width: 45%;
   }
 }
 
@@ -323,20 +384,14 @@ footer {
 @media (max-width: 480px) {
 
   nav {
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    gap: 0.5rem;
-    padding: 10px 0;
+    padding: 10px 10px;
   }
 
-  .title {
-    text-align: center;
-  }
-
-  .firstname,
+  nav, .title, .firstname,
   .lastname {
-    font-size: clamp(1.5rem, 6vw, 2.2rem); /* 🔥 lebih besar tapi tetap adaptif */
+    font-size: 1rem;
   }
 
   .tombol {
@@ -347,7 +402,7 @@ footer {
   }
 
   .tombol li a {
-    font-size: clamp(1rem, 4vw, 1.3rem); /* 🔥 tombol besar pas di jempol */
+    font-size: 0.8rem;
   }
 
   .kotak a{
@@ -383,5 +438,15 @@ footer {
 
   .kotak, .gambar {
     width: 90%;
+  }
+}
+
+@media (max-width: 560px) {
+  nav {
+    gap: 1%;
+  }
+
+  nav .title, .firstname, .lastname {
+    font-size: 0.8rem;
   }
 }
