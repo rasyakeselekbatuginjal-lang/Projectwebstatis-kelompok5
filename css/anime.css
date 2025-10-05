@@ -31,6 +31,7 @@ nav {
   align-items: center;
   border-bottom: 1px solid black;
   position: sticky;
+  justify-content: space-between;
   top: 0;
   z-index: 999;
 }
@@ -42,13 +43,13 @@ nav {
 }
 
 .firstname {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: orange;
 }
 
 .lastname {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: rgb(177, 167, 167);
 }
@@ -100,15 +101,11 @@ nav {
 /* Tombol nav */
 .tombol {
   display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  gap: 5%;
-  margin-right: 10%;
+  gap: 2rem;
 }
 
 .tombol li a {
   color: var(--bg);
-  display: inline-block;
   transition: transform 0.3s ease;
 }
 
@@ -202,15 +199,14 @@ img:hover {
 .animescroll {
   display: flex;
   overflow-x: auto;
-  gap: 3%;
-  padding: 2% 0;
-  margin-bottom: 0%;
+  gap: 1%;
+  padding: 2% 0%;
+  align-items: center;
 }
 
 .animeimg {
   flex: 0 0 auto;
-  width: 20%;
-  height: 80%;
+  width: 10%;
   text-align: center;
 }
 
@@ -223,7 +219,7 @@ img:hover {
 .animeimg p {
   text-align: center;
   color: #ddd;
-  font-size: 0.9rem;
+  font-size: clamp(0.6rem, 0.8vw, 1rem);
   margin-top: 5px;
 }
 
@@ -235,25 +231,6 @@ img:hover {
 /* ---------------------- */
 
 @media screen and (max-width: 600px) {
-
-  nav {
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 5px 0;
-  }
-
-  nav .title {
-    font-size: 0.2rem;
-  }
-
-  .halamanutama {
-    display: none;
-  }
-
-  .menubutton {
-    display: block;
-  }
 
   .tombol {
     font-size: 0.8rem;
@@ -283,6 +260,24 @@ img:hover {
 
 /* Tablet (max 900px) → 3–4 gambar sejajar */
 @media screen and (max-width: 900px) {
+  nav {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 5px 0;
+  }
+
+  nav .title {
+    font-size: 0.2rem;
+  }
+
+  .halamanutama {
+    display: none;
+  }
+
+  .menubutton {
+    display: block;
+  }
   .kotak {
     margin: 5% 4%;
     padding: 4%;
@@ -306,22 +301,95 @@ img:hover {
   }
 }
 
-/* Desktop Besar (min 1200px) → 6–7 gambar sejajar */
-@media screen and (min-width: 1200px) {
-  .kotak, .kotak1 {
-    max-width: 70%;
-    margin: 3% auto;
+  /* ============================== */
+/*  RESPONSIF UNTUK LAYAR BESAR   */
+/* ============================== */
+@media (min-width: 2000px) {
+  /* Navbar */
+  nav {
+    padding: 2rem 6rem;
   }
 
-  p {
-    font-size: 1.1rem;
+  .title .firstname {
+    font-size: 4rem;
   }
 
-  h2 {
+  .title .lastname {
+    font-size: 4rem;
+  }
+
+  .tombol li a {
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+  }
+
+  /* Kotak utama */
+  .kotak1 h2 {
+    font-size: 3.5rem;
+  }
+
+  .kotak1 p {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  /* Setiap section anime */
+  .kotak {
+    max-width: 1800px;
+    margin: 3rem auto;
+    padding: 3rem;
+  }
+
+  .kotak h2 {
+    font-size: 3rem;
+  }
+
+  .kotak p {
     font-size: 1.6rem;
+    line-height: 2.5rem;
   }
 
-  .animeimg {
-    width: 12%;
+  .rating {
+    font-size: 1.5rem;
   }
+
+  /* Gambar anime */
+  .kotak img {
+    width: 100%;
+    border-radius: 20px;
+    margin: 2rem auto;
+    display: block;
+  }
+
+  /* Tombol tonton */
+  .btn-tonton {
+    font-size: 5rem;
+    padding: 1rem 2rem;
+  }
+
+  /* Honorable Mention Scroll */
+  .animescroll {
+    gap: 7rem;
+  }
+
+  .animeimg img {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 350px;
+    
+  }
+
+  .animeimg p {
+    font-size: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Footer */
+  footer p {
+    font-size: 1rem;
+  }
+
+  
 }
