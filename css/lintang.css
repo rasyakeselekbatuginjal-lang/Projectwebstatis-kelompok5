@@ -22,7 +22,7 @@ body {
 
 /* Navbar */
 nav {
-  height: 8vh;
+  height: auto;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 0 5%;

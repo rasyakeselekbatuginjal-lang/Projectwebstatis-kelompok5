@@ -219,12 +219,16 @@ img:hover {
 .animeimg p {
   text-align: center;
   color: #ddd;
-  font-size: clamp(0.6rem, 0.8vw, 1rem);
   margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+.animeimg .judul {
+ font-size: 1rem;
 
-
+}
 
 /* ---------------------- */
 /* 📱 MEDIA QUERIES */
@@ -425,8 +429,8 @@ img:hover {
     
   }
 
-  .animeimg p {
-    font-size: 1.5rem;
+  .animeimg .judul {
+    font-size: 1.7rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
