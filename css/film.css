@@ -53,6 +53,48 @@ nav {
   color: orange;
 }
 
+.sidebar {
+  font-family: "roboto";
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: 10px;
+  display: none; 
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10%;
+}
+
+.sidebar a {
+  margin-left: 1rem;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.sidebar li {
+  width: 100%;
+  text-decoration: none;
+}
+
+.menubutton {
+  display: none;
+}
+
 /* Tombol nav */
 .tombol {
   display: flex;
@@ -170,6 +212,46 @@ footer {
 /* Mobile */
 @media (max-width: 768px) {
 
+   nav {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 5px 0;
+  }
+
+  nav .title {
+    font-size: 0.2rem;
+  }
+
+  .halamanutama {
+    display: none;
+  }
+
+  .menubutton {
+    display: block;
+  }
+  .kotak {
+    margin: 5% 4%;
+    padding: 4%;
+  }
+
+  .tombol {
+    gap: 3%;
+    margin-right: 2%;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .animeimg {
+    width: 30%;
+  }
+
   .filmimg {
     width: 40%;
   }
@@ -182,16 +264,10 @@ footer {
 
 /* Extra Small (HP jadul / mini screen) */
 @media (max-width: 480px) {
-  nav {
-   flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 10px 0;
-  }
 
   .firstname, .lastname {
     font-size: 1rem;
+    margin-right: 5%;
   }
 
   .tombol li a {

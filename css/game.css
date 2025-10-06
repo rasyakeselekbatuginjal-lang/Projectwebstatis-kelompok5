@@ -1,0 +1,431 @@
+:root {
+  --primary: #3B82F6;
+  --bg: #fff;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: url("../gambar/wp6554446.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Navbar */
+nav {
+  height: 8vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  position: sticky;
+  justify-content: space-between;
+  top: 0;
+  z-index: 999;
+}
+
+.title {
+  display: flex;
+  margin-left: 2%;
+  align-items: center;
+}
+
+.firstname {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: orange;
+}
+
+.lastname {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgb(177, 167, 167);
+}
+/* hamburger */
+.sidebar {
+  font-family: "roboto";
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: 10px;
+  display: none; 
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10%;
+}
+
+.sidebar a {
+  margin-left: 1rem;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.sidebar li {
+  width: 100%;
+  text-decoration: none;
+}
+
+.menubutton {
+  display: none;
+}
+
+
+
+/* Tombol nav */
+.tombol {
+  display: flex;
+  gap: 2rem;
+}
+
+.tombol li a {
+  color: var(--bg);
+  transition: transform 0.3s ease;
+}
+
+.tombol li a:hover {
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+/* Kotak konten */
+.kotak {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  margin: 5% auto;
+  padding: 3%;
+  max-width: 90%;
+}
+
+.kotak1 {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 2%;
+  text-align: center;
+}
+
+.kotak h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1%;
+}
+
+.kotak .sinopsis,
+.kotak .penjelasan {
+    font-size: 1rem;
+    margin-bottom: 1%;
+    color: rgb(221, 210, 210);
+    font-family: "roboto";
+}
+
+.rating {
+    color: #ffd700;
+    font-size: 0.95rem;
+    margin-bottom: 1%;
+    font-weight: bold;
+}
+
+/* Teks */
+
+.tonton a {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  margin-top: 0.5em;
+  border-radius: 12px;
+  background-color: rgba(12, 12, 91, 0.6);
+  transition: 0.3s ease;
+  color: #ddd;
+  box-shadow: -13px -5px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -13px -5px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -13px -5px 5px 0px rgba(0,0,0,0.75);
+}
+
+.tonton a:hover {
+  transform: scale(1.05);
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.btn-tonton {
+  font-size: 1.4rem;
+}
+
+/* Gambar umum */
+img {
+  width: 100%;
+  height: auto;
+  margin: 1%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: 0.8s ease;
+  box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
+  -webkit-box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
+  -moz-box-shadow: -8px -5px 17px 2px rgba(0,0,0,0.85);
+}
+
+img:hover {
+  transform: scale(0.99);
+}
+
+/* Honorable Mention (scroll horizontal) */
+.animescroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 1%;
+  padding: 2% 0%;
+  align-items: center;
+}
+
+.animeimg {
+  flex: 0 0 auto;
+  width: 10%;
+  text-align: center;
+}
+
+.animeimg img {
+  width: 100%;
+  height: auto;
+  border-radius: 8%;
+}
+
+.animeimg p {
+  text-align: center;
+  color: #ddd;
+  font-size: clamp(0.6rem, 0.8vw, 1rem);
+  margin-top: 5px;
+}
+
+
+
+
+/* ---------------------- */
+/*  MEDIA QUERIES */
+/* ---------------------- */
+
+@media screen and (max-width: 600px) {
+
+  .tombol {
+    font-size: 0.8rem;
+    flex-direction: row;
+    margin-right: 0;
+    gap: 5px;
+  }
+
+
+  .kotak, .kotak1 {
+    margin: 5% 3%;
+    padding: 5%;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .animeimg {
+    width: 45%;
+  }
+}
+
+/* Tablet (max 900px) → 3–4 gambar sejajar */
+@media screen and (max-width: 999px) {
+  nav {
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 5px 0;
+  }
+
+  nav .title {
+    font-size: 0.2rem;
+  }
+
+  .halamanutama {
+    display: none;
+  }
+
+  .menubutton {
+    display: block;
+  }
+  .kotak {
+    margin: 5% 4%;
+    padding: 4%;
+  }
+
+  .tombol {
+    gap: 3%;
+    margin-right: 2%;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .animeimg {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1000px) {
+    .title .firstname {
+    font-size: 1.5rem;
+  }
+
+  .title .lastname {
+    font-size: 1.5rem;
+  }
+
+    nav {
+        height: auto;
+    }
+
+    .tombol {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1500px) {
+      .title .firstname {
+    font-size: 1.9rem;
+  }
+
+  .title .lastname {
+    font-size: 1.9rem;
+  }
+
+  .tombol {
+    font-size: 1.4rem;
+  }
+
+  
+}
+
+
+  /* ============================== */
+/*  RESPONSIF UNTUK LAYAR BESAR   */
+/* ============================== */
+@media (min-width: 2000px) {
+  /* Navbar */
+  nav {
+    height: auto;
+  }
+
+  .title .firstname {
+    font-size: 4rem;
+  }
+
+  .title .lastname {
+    font-size: 4rem;
+  }
+
+  .tombol li a {
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+  }
+
+  /* Kotak utama */
+  .kotak1 h2 {
+    font-size: 3.5rem;
+  }
+
+  .kotak1 p {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  /* Setiap section anime */
+  .kotak {
+    max-width: 80%;
+    margin: 3rem auto;
+    padding: 3rem;
+  }
+
+  .kotak h2 {
+    font-size: 3rem;
+  }
+
+  .kotak p {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+  }
+
+  .rating {
+    font-size: 1.5rem;
+  }
+
+  /* Gambar anime */
+  .kotak img {
+    width: 100%;
+    border-radius: 20px;
+    margin: 2rem auto;
+    display: block;
+  }
+
+  /* Tombol tonton */
+  .btn-tonton {
+    font-size: 5rem;
+    padding: 1rem 2rem;
+  }
+
+  /* Honorable Mention Scroll */
+  .animescroll {
+    gap: 7rem;
+  }
+
+  .gameimg img {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 350px;
+    
+  }
+
+  .gameimg p {
+    font-size: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Footer */
+  footer p {
+    font-size: 1rem;
+  }
+
+  
+}

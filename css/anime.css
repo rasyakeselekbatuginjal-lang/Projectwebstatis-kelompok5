@@ -261,6 +261,7 @@ img:hover {
 /* Tablet (max 900px) → 3–4 gambar sejajar */
 @media screen and (max-width: 900px) {
   nav {
+    height: auto;
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
@@ -298,6 +299,51 @@ img:hover {
 
   .animeimg {
     width: 30%;
+  }
+}
+
+@media (min-width: 1000px) {
+    .title .firstname {
+    font-size: 1.5rem;
+  }
+
+  .title .lastname {
+    font-size: 1.5rem;
+  }
+
+    nav {
+        height: auto;
+    }
+
+    .tombol {
+        font-size: 1.1rem;
+    }
+
+    .kotak p {
+    font-size: 1.2rem;
+  }
+
+  .kotak .sinopsis p {
+    font-size: 1.2rem;
+  }
+}
+
+
+@media (min-width: 1500px) {
+      .title .firstname {
+    font-size: 1.9rem;
+  }
+
+  .title .lastname {
+    font-size: 1.9rem;
+  }
+
+  .tombol {
+    font-size: 1.4rem;
+  }
+
+  .kotak p {
+    font-size: 1rem;
   }
 }
 

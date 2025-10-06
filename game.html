@@ -4,8 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- font -->
+       <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- link css -->
+    <link rel="stylesheet" href="css/game.css">
 </head>
 <body>
-    <h1>halaman Game</h1>
+    <nav>
+    <ul class="sidebar">
+      <li onclick=hidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708z"/>
+      </svg></a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="anime.html">Anime</a></li>
+      <li><a href="index.html#game">Game</a></li>
+      <li><a href="index.html#film">Film</a></li>
+    </ul>
+    
+    <div class="title">
+      <div class="firstname">Recomendation</div>
+      <div class="lastname">Hunt</div>
+    </div>
+
+    <ul class="tombol">
+      <li class="halamanutama"><a href="index.html">Home</a></li>
+      <li class="halamanutama"><a href="index.html#game">Game</a></li>
+      <li class="halamanutama"><a href="index.html#film">Film</a></li>
+      <li class="halamanutama"><a href="index.html#music">Music</a></li>
+      <li class="halamanutama"><a href="index.html#manga">Manga</a></li>
+      <li class="menubutton" onclick=showsidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+</svg></a></li>
+    </ul>
+  </nav>
+
+  <section class="kotak">
+        <h2>5. La La Land</h2>
+        <div class="sinopsis">
+            <p><B>La La Land</B> bercerita tentang Mia, calon aktris, dan Sebastian, pianis jazz, yang saling jatuh cinta dan mendukung mimpi masing-masing. Namun, ambisi membuat mereka berpisah; di akhir, keduanya sukses tapi hanya bisa mengenang cinta itu dengan senyum.</p>
+        </div>
+        <div class="rating">
+            IMDb rating:⭐8.0/10 | Rank #5 | Genre: Musical, romantic, comedy-drama
+        </div>
+        <img src="gambar/" alt="Gambar La La Land">
+    </section>
+<script>
+     function showsidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'}
+
+    function hidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+    }
+</script>
 </body>
 </html>
