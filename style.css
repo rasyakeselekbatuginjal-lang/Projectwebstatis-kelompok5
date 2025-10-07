@@ -215,18 +215,17 @@ footer {
     padding: 0 10%;
   }
 
- nav .tombol, .halamanutama {
-    gap: 50%;
-    font-size: 3rem;
-    align-items: center;
+ nav ul li a {
+  font-size: 2rem;
+ }
+
+  .menu-text {
+    font-size: 2rem !important;
   }
 
-   .tombol li a {
-    font-size: 10rem;
-  }
 
-  nav .title, .firstname,
-  .lastname {
+  nav .title, div.firstname,
+  div.lastname {
     font-size: 4rem;
   }
 
@@ -278,15 +277,15 @@ footer {
     font-size: 3.5rem;
   }
 }
-
+/* sekat */
 @media (min-width: 1440px) {
   nav {
     padding: 0 8%;
   }
 
-  nav .title, .firstname,
-  .lastname {
-    font-size: 2rem;
+  nav .title, div.firstname,
+  div.lastname {
+    font-size: 3rem;
   }
 
   nav .tombol {
@@ -346,7 +345,7 @@ footer {
     font-size: 1.5rem;
   }
 
-  .halamanutama {
+  .menu-text {
     display: none;
   }
 
@@ -361,6 +360,9 @@ footer {
     gap: 5px;
   }
 
+  img.mono {
+    width: 10%;
+  }
 
   .kotak, .kotak1 {
     margin: 5% 3%;
@@ -415,6 +417,8 @@ footer {
     max-width: none;
   }
 
+  
+
   .kotak h2 {
     font-size: 1.1rem;
   }
@@ -444,9 +448,17 @@ footer {
 @media (max-width: 560px) {
   nav {
     gap: 1%;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 10px;
+    height: auto;
+  }
+
+  .gallery .mono {
+    display: none;
   }
 
   nav .title, .firstname, .lastname {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }

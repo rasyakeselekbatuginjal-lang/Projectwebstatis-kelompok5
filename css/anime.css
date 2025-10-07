@@ -217,6 +217,7 @@ img:hover {
 }
 
 .animeimg p {
+  font-size: clamp(0.6rem, 0.8vw, 2rem) !important;
   text-align: center;
   color: #ddd;
   margin-top: 5px;
@@ -283,6 +284,7 @@ img:hover {
   .menubutton {
     display: block;
   }
+
   .kotak {
     margin: 5% 4%;
     padding: 4%;
@@ -334,20 +336,30 @@ img:hover {
 
 
 @media (min-width: 1500px) {
-      .title .firstname {
-    font-size: 1.9rem;
+  .title .firstname {
+    font-size: 3rem;
   }
 
   .title .lastname {
-    font-size: 1.9rem;
+    font-size: 3rem;
   }
 
-  .tombol {
-    font-size: 1.4rem;
+  .tombol li a{
+    font-size: 2rem;
   }
 
-  .kotak p {
-    font-size: 1rem;
+    .sinopsis p,
+.penjelasan p {
+  font-size: 24px !important;
+}
+
+.kotak1 h2 {
+    font-size: 3rem;
+  }
+
+  .kotak1 p {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
   }
 }
 
@@ -359,6 +371,12 @@ img:hover {
   nav {
     padding: 2rem 6rem;
   }
+
+  .sinopsis p,
+.penjelasan p {
+  font-size: 32px !important;
+}
+
 
   .title .firstname {
     font-size: 4rem;
