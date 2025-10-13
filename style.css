@@ -53,7 +53,7 @@ nav {
   font-weight: bold;
   color: rgb(242, 242, 242);
 }
-/* hambugrer */
+
 /* hamburger */
 .sidebar {
   font-family: "roboto";
@@ -67,8 +67,8 @@ nav {
   backdrop-filter: 10px;
   display: none; 
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: start;
+  justify-content: start;
   gap: 10%;
 }
 
@@ -96,7 +96,6 @@ nav {
 .menubutton {
   display: none;
 }
-
 
 .tombol {
   display: flex;
@@ -342,7 +341,7 @@ footer {
   }
 
   nav .title, .firstname, .lastname {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .menu-text {
