@@ -199,13 +199,8 @@ img:hover {
   transform: scale(0.98);
 }
 
-/* FOOTER */
 footer {
-  text-align: center;
-  padding: 2% 5%;
-  background: rgba(0, 0, 0, 0.6);
-  margin-top: 2rem;
-  font-size: 0.9rem;
+  font-weight: 300;
 }
 
 /* media query */
