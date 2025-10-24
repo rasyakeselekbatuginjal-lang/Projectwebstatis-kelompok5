@@ -21,6 +21,21 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/* komentar */
+
+#disqus_thread {
+  max-height: 10%;
+  max-width: 75%;       /* biar fleksibel di semua layar */
+  margin: 20px auto;     /* kasih jarak atas-bawah */
+  padding: 15px;         /* ruang dalam */
+  background: rgba(211, 204, 204, 0.6);   /* warna latar belakang */
+  border-radius: 65px;    /* sudut membulat */
+box-shadow: 0px 0px 20px 11px rgba(49,41,41,0.82);
+-webkit-box-shadow: 0px 0px 20px 11px rgba(49,41,41,0.82);
+-moz-box-shadow: 0px 0px 20px 11px rgba(49,41,41,0.82); /* efek bayangan */
+}
+
+
 /* Navbar */
 nav {
   height: 8vh;
