@@ -252,10 +252,10 @@ img:hover {
 
 @media screen and (max-width: 600px) {
 
-   #disqus_thread {
+     #disqus_thread {
+    max-width: 85%;   /* biar penuh di layar kecil */
+    margin: 10px auto;
     padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
   }
 
 
@@ -288,10 +288,6 @@ img:hover {
 /* Tablet (max 900px) → 3–4 gambar sejajar */
 @media screen and (max-width: 999px) {
 
-  #disqus_thread {
-    padding: 12px;
-    margin: 15px;
-  }
 
 
   nav {
@@ -338,11 +334,6 @@ img:hover {
 }
 
 @media (min-width: 1000px) {
-
-  #disqus_thread {
-    max-width: 900px; /* batasi lebar biar nggak kepanjangan */
-  }
-
 
     .title .firstname {
     font-size: 1.5rem;
